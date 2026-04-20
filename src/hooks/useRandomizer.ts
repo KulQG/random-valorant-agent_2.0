@@ -40,6 +40,7 @@ export const useRandomizer = (
     setSelectedAgent(null);
 
     const finalAgent = getRandomAgent();
+    setSelectedAgent(finalAgent)
 
     const fullCycles = Math.max(
       1,
@@ -54,7 +55,6 @@ export const useRandomizer = (
     setDisplayedAgents(agentSequence);
 
     setTimeout(() => {
-      setSelectedAgent(finalAgent);
       setIsSpinning(false);
     }, SCROLL_DURATION + 50);
   };

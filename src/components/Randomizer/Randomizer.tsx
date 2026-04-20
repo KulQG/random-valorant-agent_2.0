@@ -44,18 +44,18 @@ export const Randomizer = ({ data, selectedRoleId }: RandomizerProps) => {
 
   return (
     <div className={styles.container}>
-      {selectedAgent && !isSpinning && (
-        <div
-          className={styles.selectedAgent}
-          style={{ background: `url(${selectedAgent.bg})` }}
-        >
-          <img
-            src={selectedAgent.portrait}
-            alt={selectedAgent.name}
-            className={styles.portrait}
-          />
-        </div>
-      )}
+      <div
+        className={`${styles.selectedAgent} ${isSpinning ? styles.hidden : styles.visible}`}
+        style={{ background: `url(${selectedAgent?.bg})` }}
+      >
+        <img
+          loading="eager"
+          fetchPriority="high"
+          src={selectedAgent?.portrait}
+          alt={selectedAgent?.name}
+          className={styles.portrait}
+        />
+      </div>
 
       <div className={styles.scrollContainer}>
         <div
