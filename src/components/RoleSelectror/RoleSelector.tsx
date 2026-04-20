@@ -1,5 +1,5 @@
 import styles from "./RoleSelector.module.css";
-import type { ProcessedData } from "../types";
+import type { ProcessedData } from "../../types";
 
 interface RoleSelectorProps {
   data?: ProcessedData;
