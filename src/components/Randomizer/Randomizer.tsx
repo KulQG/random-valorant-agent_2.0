@@ -23,7 +23,15 @@ export const Randomizer = ({ data, selectedRoleId }: RandomizerProps) => {
     if (isSpinning && displayedAgents.length > 0) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setScrollOffset(0);
-      console.log(">>> back to start");
+
+      if (selectedAgent) {
+        const imgPortrait = new Image();
+        imgPortrait.src = selectedAgent.portrait;
+
+        // Предзагрузка фона
+        const imgBg = new Image();
+        imgBg.src = selectedAgent?.bg;
+      }
 
       const timer = setTimeout(() => {
         const targetOffset = (displayedAgents.length - 1) * 100 - 5;
@@ -32,7 +40,7 @@ export const Randomizer = ({ data, selectedRoleId }: RandomizerProps) => {
 
       return () => clearTimeout(timer);
     }
-  }, [displayedAgents, isSpinning]);
+  }, [displayedAgents, isSpinning, selectedAgent]);
 
   return (
     <div className={styles.container}>
