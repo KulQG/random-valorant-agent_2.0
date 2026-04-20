@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.roleButton {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #ff4655 0%, #ff6a73 100%);
+    border-color: #ff4655;
+    box-shadow: 0 0 12px rgba(255, 70, 85, 0.5);
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  color: #fff;
+}
