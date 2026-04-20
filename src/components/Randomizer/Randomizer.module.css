@@ -22,7 +22,7 @@
 
   &.hidden {
     opacity: 0;
-    transition: 300ms;
+    transition: 0ms;
     background-position: left !important;
   }
 
