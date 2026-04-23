@@ -57,13 +57,9 @@
     height: 100%;
   }
 
-  .selectedAgent {
-    background-size: auto !important;
-  }
-
   .portrait {
     max-width: none;
-    width: 124%;
+    width: 100%;
   }
 }
 
